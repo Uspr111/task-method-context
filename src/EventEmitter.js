@@ -15,7 +15,7 @@ export const EventEmitter = {
     off(eventName, callback) {
         const existingHandlers = this.handlers.get(eventName);
         if (existingHandlers) {
-            const handlerIndex = existingHandlers.find(
+            const handlerIndex = existingHandlers.findIndex(
                 (handler) => handler === callback,
             );
             if (handlerIndex !== -1) {
